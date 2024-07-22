@@ -128,6 +128,38 @@ npm run cy:open
 
 Check out the [Contributing Guideline](/CONTRIBUTING.md).
 
+
+
+
+## commands used in building a docker image and running a container.
+-The **`FROM cypress/factory`** command sets up the base image (environment) for the Docker container with Node.js and Cypress pre-installed.
+
+-**WORKDIR /app**: this command sets the working directory inside the Docker container to `/app`. All subsequentn commands in the Dockerfile will be executed in this directory.
+
+-**COPY package*.json ./**: this command copies `Package.json` and `package-lock.json` for dependency installation.
+
+-**RUN npm install**: this command install all project dependemcies. This command ensure the installation of all necessary Node.js modules in the container.
+
+-**COPY ..**: this command copies the rest of the project files into the Docker container.The first . refers to the current directory on the local machine, and the second . refers to the current working directory in the Docker container (/app).
+
+-**CMD["npx","run","local:run"]**: this command specifies the default command to runs the test script defined in `package.son`. the `npx` is a tool that comes with npm and is used to execute binaries from npm packages, it is used to run a script named `local:run`. 
+
+-**docker build -t cypress-example-kitchensink .**:
+•	`docker build`: This command is used to build a Docker image from a Dockerfile.
+•	`-t` cypress-example-kitchensink: The -t flag tags the image with a name. In this case, the image is named cypress-example-kitchensink.
+•	`.`: The dot at the end specifies the build context. It tells Docker to use the current directory (where the Dockerfile is located) to build the image.
+
+
+-**docker images**:This command lists all Docker images currently available on the system. It shows details such as the repository name, tag, image ID, creation date, and size of the images.
+
+-**docker run -it -v C:\Users\Mawusi Debby\Downloads\cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js cypress-example-kitchensink**:
+•	  `docker run`: This command creates and starts a new container from a specified image.
+•	`-it`: These flags are used together to run the container in interactive mode. This allows you to interact with the container through the terminal.
+•	`-v C:\Users\Mawusi Debby\Downloads\cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js`: The -v flag mounts a volume, which maps a file or directory from the host system to the container. In this case, it maps the todo.cy.js file from the specified location on the host machine to /app/cypress/e2e/todo.cy.js inside the container.
+
+
+
+
 ## Changelog
 
 - after v1.0.4 at [cypress-example-kitchensink/releases](https://github.com/cypress-io/cypress-example-kitchensink/releases)
