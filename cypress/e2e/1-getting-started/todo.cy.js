@@ -20,4 +20,23 @@ describe("Todo-Task Application", () => {
     // Check that the last item in the todo list has the text of the new item
     cy.get(".todo-list li:last").should("have.text", newItem);
   });
+
+
+  it('As a user, I can modify task and check that change is displayed', () => {
+    const newItem = 'Feed the cat'
+
+    //Select the input field locator for the updating task
+    cy.get('.todo-list li:first').within(() => {    
+      
+      //Activate the editing mode for the updating task
+      cy.get('label').dblclick();                  
+      cy.get('input.edit').clear();    
+
+      //Updating the activated task field             
+      cy.get('input.edit').type(`${newItem}{enter}`);
+
+    })
+    //Checking that changes are correctly saved and displayed.
+    cy.get('.todo-list li:first').should('have.text', newItem);
+  })
 });
