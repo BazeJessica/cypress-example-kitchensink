@@ -1,4 +1,4 @@
-// install.mjs
+install.mjs
 //
 // See "CI server and Docker" in
 // https://typicode.github.io/husky/how-to.html#ci-server-and-docker

@@ -42,8 +42,8 @@
     "local:run": "start-test 8080 cy:run",
     "local:run:record": "start-test 8080 cy:run:record",
     "ci:set-port": "node ./scripts/set-port",
-    "semantic-release": "semantic-release",
-    "prepare": "node .husky/install.mjs"
+    "semantic-release": "semantic-release"
+   
   },
   "repository": {
     "type": "git",
