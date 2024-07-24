@@ -39,4 +39,35 @@ describe("Todo-Task Application", () => {
     //Checking that changes are correctly saved and displayed.
     cy.get('.todo-list li:first').should('have.text', newItem);
   })
+
+
+
+  it('As a user, I can mark a tasks as completed and updates the remaining items count', () => {
+    // Initial check of the remaining items count
+    cy.get('.todo-count').should('contain.text', '2 items left'); 
+
+    // Select the first element within the .todo-list and mark it as completed
+    cy.get('.todo-list li:first').within(() => {
+      cy.get('.toggle').check(); // Mark the task as completed
+    });
+    
+    // Verify that the task is marked as completed 
+    cy.get('.todo-list li:first').should('have.class', 'completed');
+    
+    // Check the updated remaining items count
+    cy.get('.todo-count').should('contain.text', '1 item left'); 
+    
+    // Mark another task as completed
+    cy.get('.todo-list li:nth-child(2)').within(() => {
+      cy.get('.toggle').check(); // Mark the task as completed
+    });
+    
+    // Verify that the second task is marked as completed
+    cy.get('.todo-list li:nth-child(2)').should('have.class', 'completed');
+    
+    // Check the updated remaining items count again
+    cy.get('.todo-count').should('contain.text', '0 items left');  
+
+
+  })
 });
