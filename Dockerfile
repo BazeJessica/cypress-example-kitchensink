@@ -19,8 +19,7 @@ RUN npm install
 COPY . .
 
 # Run Cypress tests
-RUN npx cypress run todo.cy.js
-
+CMD["npx","run","local:run"]
 
 
 # # use Cypress provided image with all dependencies included
