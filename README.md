@@ -17,66 +17,66 @@ For an example payment application demonstrating real-world usage of Cypress.io 
 
 The following table lists live workflows from various CI providers. These each independently test the contents of this example repository. They run and record using [Cypress Cloud](https://on.cypress.io/guides/cloud/introduction) with their results displaying centrally under Cypress Cloud [ProjectId `4b7344`](https://cloud.cypress.io/#/projects/4b7344/runs). Each CI provider shows its build status on its own site:
 
-CI Provider |  Workflow | Build Status |
-:--- | :--- | :--- |
-[AppVeyor][AppVeyor docs] | [appveyor.yml][AppVeyor workflow] | [![AppVeyor CI][AppVeyor badge]][AppVeyor log] |
-[CircleCI][CircleCi docs] |  [.circleci/config.yml][CircleCI workflow] | [![CircleCI][CircleCI badge]][CircleCI log] |
-[**cypress-io/github-action**][Cy GitHub Actions docs] | [using-action.yml][Cy GitHub Actions workflow] | [![Cypress GHA status][Cy GitHub Actions badge]][Cy GitHub Actions log]
-[GitHub Actions][GitHub Actions docs] | [parallel.yml][GitHub Actions workflow] | [![Parallel tests status][GitHub Actions badge]][GitHub Actions log]
+| CI Provider                                            | Workflow                                       | Build Status                                                            |
+| :----------------------------------------------------- | :--------------------------------------------- | :---------------------------------------------------------------------- |
+| [AppVeyor][AppVeyor docs]                              | [appveyor.yml][AppVeyor workflow]              | [![AppVeyor CI][AppVeyor badge]][AppVeyor log]                          |
+| [CircleCI][CircleCi docs]                              | [.circleci/config.yml][CircleCI workflow]      | [![CircleCI][CircleCI badge]][CircleCI log]                             |
+| [**cypress-io/github-action**][Cy GitHub Actions docs] | [using-action.yml][Cy GitHub Actions workflow] | [![Cypress GHA status][Cy GitHub Actions badge]][Cy GitHub Actions log] |
+| [GitHub Actions][GitHub Actions docs]                  | [parallel.yml][GitHub Actions workflow]        | [![Parallel tests status][GitHub Actions badge]][GitHub Actions log]    |
 
 <!-- CI provider links -->
-[AppVeyor docs]:            https://www.appveyor.com/docs/
-[AppVeyor badge]:           https://ci.appveyor.com/api/projects/status/bo4x59pha1eb18de/branch/master?svg=true
-[AppVeyor log]:             https://ci.appveyor.com/project/cypress-io/cypress-example-kitchensink
-[AppVeyor workflow]:        appveyor.yml
 
-[CircleCI docs]:            https://circleci.com/docs/
-[CircleCI badge]:           https://circleci.com/gh/cypress-io/cypress-example-kitchensink/tree/master.svg?style=shield
-[CircleCI log]:             https://circleci.com/gh/cypress-io/cypress-example-kitchensink/tree/master
-[CircleCI workflow]:        .circleci/config.yml
-
-[Cy GitHub Actions docs]:   https://github.com/cypress-io/github-action#readme
-[Cy GitHub Actions badge]:  https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/using-action.yml/badge.svg
-[Cy GitHub Actions log]:    https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/using-action.yml?query=branch%3Amaster
-[Cy GitHub Actions workflow]:  .github/workflows/using-action.yml
-
-[GitHub Actions docs]:      https://docs.github.com/en/actions
-[GitHub Actions badge]:     https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/parallel.yml/badge.svg
-[GitHub Actions log]:       https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/parallel.yml?query=branch%3Amaster
-[GitHub Actions workflow]:  .github/workflows/parallel.yml
+[AppVeyor docs]: https://www.appveyor.com/docs/
+[AppVeyor badge]: https://ci.appveyor.com/api/projects/status/bo4x59pha1eb18de/branch/master?svg=true
+[AppVeyor log]: https://ci.appveyor.com/project/cypress-io/cypress-example-kitchensink
+[AppVeyor workflow]: appveyor.yml
+[CircleCI docs]: https://circleci.com/docs/
+[CircleCI badge]: https://circleci.com/gh/cypress-io/cypress-example-kitchensink/tree/master.svg?style=shield
+[CircleCI log]: https://circleci.com/gh/cypress-io/cypress-example-kitchensink/tree/master
+[CircleCI workflow]: .circleci/config.yml
+[Cy GitHub Actions docs]: https://github.com/cypress-io/github-action#readme
+[Cy GitHub Actions badge]: https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/using-action.yml/badge.svg
+[Cy GitHub Actions log]: https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/using-action.yml?query=branch%3Amaster
+[Cy GitHub Actions workflow]: .github/workflows/using-action.yml
+[GitHub Actions docs]: https://docs.github.com/en/actions
+[GitHub Actions badge]: https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/parallel.yml/badge.svg
+[GitHub Actions log]: https://github.com/cypress-io/cypress-example-kitchensink/actions/workflows/parallel.yml?query=branch%3Amaster
+[GitHub Actions workflow]: .github/workflows/parallel.yml
 
 You can find all CI results recorded on the Cypress Cloud
 [![Cypress Cloud](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/4b7344/master&style=flat&logo=cypress)](https://cloud.cypress.io/projects/4b7344/runs)
+
 ## CI Workflow Examples
 
 This table shows additional documentation-only examples of CI workflows. These are **not** live examples as in the table above and they may require modification before use.
 
-CI Provider |  Basic Config | Full Parallel Config
-:--- |  :--- | :---
-[AWS Amplify][AWS Amplify docs] | [amplify.yml](amplify.yml) |
-[AWS CodeBuild][AWS CodeBuild docs] | [basic/buildspec.yml](./basic/buildspec.yml) | [buildspec.yml](buildspec.yml)
-[Azure Pipelines][Azure Pipelines docs] | [basic/azure-ci.yml](basic/azure-ci.yml) | [azure-ci.yml](azure-ci.yml)
-[Buddy.works][Buddy.works docs] | [buddy.yml](buddy.yml)
-[Buildkite][Buildkite docs] | [.buildkite/pipeline.yml](.buildkite/pipeline.yml)
-[CircleCI][CircleCi docs]  | [basic/.circleci/config.yml](basic/.circleci/config.yml)
-[CloudBees CodeShip Pro][CloudBees CodeShip Pro docs] | [basic/codeship-pro](basic/codeship-pro)
-[GitHub Actions][GitHub Actions docs] |  [single.yml](.github/workflows/single.yml)
-[GitLab][GitLab docs] | [basic/.gitlab-ci.yml](basic/.gitlab-ci.yml) | [.gitlab-ci.yml](.gitlab-ci.yml)
-[Jenkins][Jenkins docs] | [basic/Jenkinsfile](basic/Jenkinsfile) | [Jenkinsfile](Jenkinsfile)
-[Semaphore 2.0][Semaphore 2.0 docs] | [basic/.semaphore.yml](basic/.semaphore.yml) | [.semaphore/semaphore.yml](.semaphore/semaphore.yml)
-[Travis CI][Travis CI docs] | [basic/.travis.yml](basic/.travis.yml) | [.travis.yml](.travis.yml)
+| CI Provider                                           | Basic Config                                             | Full Parallel Config                                 |
+| :---------------------------------------------------- | :------------------------------------------------------- | :--------------------------------------------------- |
+| [AWS Amplify][AWS Amplify docs]                       | [amplify.yml](amplify.yml)                               |
+| [AWS CodeBuild][AWS CodeBuild docs]                   | [basic/buildspec.yml](./basic/buildspec.yml)             | [buildspec.yml](buildspec.yml)                       |
+| [Azure Pipelines][Azure Pipelines docs]               | [basic/azure-ci.yml](basic/azure-ci.yml)                 | [azure-ci.yml](azure-ci.yml)                         |
+| [Buddy.works][Buddy.works docs]                       | [buddy.yml](buddy.yml)                                   |
+| [Buildkite][Buildkite docs]                           | [.buildkite/pipeline.yml](.buildkite/pipeline.yml)       |
+| [CircleCI][CircleCi docs]                             | [basic/.circleci/config.yml](basic/.circleci/config.yml) |
+| [CloudBees CodeShip Pro][CloudBees CodeShip Pro docs] | [basic/codeship-pro](basic/codeship-pro)                 |
+| [GitHub Actions][GitHub Actions docs]                 | [single.yml](.github/workflows/single.yml)               |
+| [GitLab][GitLab docs]                                 | [basic/.gitlab-ci.yml](basic/.gitlab-ci.yml)             | [.gitlab-ci.yml](.gitlab-ci.yml)                     |
+| [Jenkins][Jenkins docs]                               | [basic/Jenkinsfile](basic/Jenkinsfile)                   | [Jenkinsfile](Jenkinsfile)                           |
+| [Semaphore 2.0][Semaphore 2.0 docs]                   | [basic/.semaphore.yml](basic/.semaphore.yml)             | [.semaphore/semaphore.yml](.semaphore/semaphore.yml) |
+| [Travis CI][Travis CI docs]                           | [basic/.travis.yml](basic/.travis.yml)                   | [.travis.yml](.travis.yml)                           |
 
 <!-- CI provider doc links -->
-[AWS Amplify docs]:             https://docs.amplify.aws/
-[AWS CodeBuild docs]:           https://docs.aws.amazon.com/codebuild/
-[Azure Pipelines docs]:         https://learn.microsoft.com/en-us/azure/devops/pipelines/
-[Buddy.works docs]:             https://buddy.works/docs
-[Buildkite docs]:               https://buildkite.com/docs
-[CloudBees CodeShip Pro docs]:  https://docs.cloudbees.com/docs/cloudbees-codeship/
-[GitLab docs]:                  https://docs.gitlab.com/ee/ci/yaml/
-[Jenkins docs]:                 https://www.jenkins.io/doc/
-[Semaphore 2.0 docs]:           https://docs.semaphoreci.com/
-[Travis CI docs]:               https://docs.travis-ci.com/
+
+[AWS Amplify docs]: https://docs.amplify.aws/
+[AWS CodeBuild docs]: https://docs.aws.amazon.com/codebuild/
+[Azure Pipelines docs]: https://learn.microsoft.com/en-us/azure/devops/pipelines/
+[Buddy.works docs]: https://buddy.works/docs
+[Buildkite docs]: https://buildkite.com/docs
+[CloudBees CodeShip Pro docs]: https://docs.cloudbees.com/docs/cloudbees-codeship/
+[GitLab docs]: https://docs.gitlab.com/ee/ci/yaml/
+[Jenkins docs]: https://www.jenkins.io/doc/
+[Semaphore 2.0 docs]: https://docs.semaphoreci.com/
+[Travis CI docs]: https://docs.travis-ci.com/
 
 The Cypress documentation page [CI Provider Examples](https://docs.cypress.io/guides/continuous-integration/ci-provider-examples) provides some more examples with extensive guides for using Cypress with some of the most popular CI providers.
 
@@ -84,8 +84,8 @@ The Cypress documentation page [CI Provider Examples](https://docs.cypress.io/gu
 
 **If you get stuck, here is more help:**
 
-* [Discord Chat](https://on.cypress.io/discord) to connect to our community
-* [Cypress Docs](https://on.cypress.io)
+- [Discord Chat](https://on.cypress.io/discord) to connect to our community
+- [Cypress Docs](https://on.cypress.io)
 
 ### 1. Fork this repo
 
@@ -129,58 +129,60 @@ npm run cy:open
 Check out the [Contributing Guideline](/CONTRIBUTING.md).
 
 
-
-
-## commands used in building a docker image and running a container.
--The **`FROM cypress/factory`** command sets up the base image (environment) for the Docker container with Node.js and Cypress pre-installed.
-
--**WORKDIR /app**: this command sets the working directory inside the Docker container to `/app`. All subsequentn commands in the Dockerfile will be executed in this directory.
-
--**COPY package*.json ./**: this command copies `Package.json` and `package-lock.json` for dependency installation.
-
--**RUN npm install**: this command install all project dependemcies. This command ensure the installation of all necessary Node.js modules in the container.
-
--**COPY ..**: this command copies the rest of the project files into the Docker container.The first . refers to the current directory on the local machine, and the second . refers to the current working directory in the Docker container (/app).
-
--**CMD["npx","run","local:run"]**: this command specifies the default command to runs the test script defined in `package.son`. the `npx` is a tool that comes with npm and is used to execute binaries from npm packages, it is used to run a script named `local:run`. 
-
--**docker build -t cypress-example-kitchensink .**:
-•	`docker build`: This command is used to build a Docker image from a Dockerfile.
-•	`-t` cypress-example-kitchensink: The -t flag tags the image with a name. In this case, the image is named cypress-example-kitchensink.
-•	`.`: The dot at the end specifies the build context. It tells Docker to use the current directory (where the Dockerfile is located) to build the image.
-
-
--**docker images**:This command lists all Docker images currently available on the system. It shows details such as the repository name, tag, image ID, creation date, and size of the images.
-
--**docker run -it -v C:\Users\Mawusi Debby\Downloads\cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js cypress-example-kitchensink**:
-•	  `docker run`: This command creates and starts a new container from a specified image.
-•	`-it`: These flags are used together to run the container in interactive mode. This allows you to interact with the container through the terminal.
-•	`-v C:\Users\Mawusi Debby\Downloads\cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js`: The -v flag mounts a volume, which maps a file or directory from the host system to the container. In this case, it maps the todo.cy.js file from the specified location on the host machine to /app/cypress/e2e/todo.cy.js inside the container.
-
-
-
-
 ## Changelog
 
 - after v1.0.4 at [cypress-example-kitchensink/releases](https://github.com/cypress-io/cypress-example-kitchensink/releases)
 - before at [CHANGELOG_OLD.md](CHANGELOG_OLD.md)
 
 
-Commands used in building a docker image and running a container.
--The FROM cypress/factory command sets up the base image (environment) for the Docker container with Node.js and Cypress pre-installed.
 
--WORKDIR /app: this command sets the working directory inside the Docker container to /app. All subsequentn commands in the Dockerfile will be executed in this directory.
 
--COPY package.json ./*: this command copies Package.json and package-lock.json for dependency installation.
+## Commands used in building a docker image and running a container.
 
--RUN npm install: this command install all project dependemcies. This command ensure the installation of all necessary Node.js modules in the container.
+-Download and install Docker for windows/ Linux/Mac.(https://docs.docker.com/desktop/install/windows-install/)
 
--COPY ..: this command copies the rest of the project files into the Docker container.The first . refers to the current directory on the local machine, and the second . refers to the current working directory in the Docker container (/app).
+-Create a docker file in the root folder with the following commands
 
--CMD["npx","run","local:run"]: this command specifies the default command to runs the test script defined in package.son. the npx is a tool that comes with npm and is used to execute binaries from npm packages, it is used to run a script named local:run.
+[
+` 
+FROM cypress/factory
 
--docker build -t cypress-example-kitchensink .: • docker build: This command is used to build a Docker image from a Dockerfile. • -t cypress-example-kitchensink: The -t flag tags the image with a name. In this case, the image is named cypress-example-kitchensink. • .: The dot at the end specifies the build context. It tells Docker to use the current directory (where the Dockerfile is located) to build the image.
+WORKDIR /app
 
--docker images:This command lists all Docker images currently available on the system. It shows details such as the repository name, tag, image ID, creation date, and size of the images.
+COPY package\*.json ./
 
--docker run -it -v C:\Users\Mawusi Debby\Downloads\cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js cypress-example-kitchensink: • docker run: This command creates and starts a new container from a specified image. • -it: These flags are used together to run the container in interactive mode. This allows you to interact with the container through the terminal. • -v C:\Users\Mawusi Debby\Downloads\cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js: The -v flag mounts a volume, which maps a file or directory from the host system to the container. In this case, it maps the todo.cy.js file from the specified location on the host machine to /app/cypress/e2e/todo.cy.js inside the container.
+RUN rm package-lock.json
+
+RUN npm install
+
+COPY . .
+
+CMD["npx","run","local:run"]
+`
+]
+
+
+-The **`FROM cypress/factory`\*\* command sets up the base image (environment) for the Docker container with Node.js and Cypress pre-installed.
+
+-**WORKDIR /app**: this command sets the working directory inside the Docker container to `/app`. All subsequentn commands in the Dockerfile will be executed in this directory.
+
+-**COPY package\*.json ./**: this command copies `Package.json` and `package-lock.json` for dependency installation.
+
+-**RUN npm install**: this command install all project dependemcies. This command ensure the installation of all necessary Node.js modules in the container.
+
+-**COPY ..**: this command copies the rest of the project files into the Docker container.The first . refers to the current directory on the local machine, and the second . refers to the current working directory in the Docker container (/app).
+
+-**CMD["npx","run","local:run"]**: this command specifies the default command to runs the test script defined in `package.son`. the `npx` is a tool that comes with npm and is used to execute binaries from npm packages, it is used to run a script named `local:run`.
+
+-**docker build -t cypress-example-kitchensink .**:
+• `docker build`: This command is used to build a Docker image from a Dockerfile.
+• `-t` cypress-example-kitchensink: The -t flag tags the image with a name. In this case, the image is named cypress-example-kitchensink.
+• `.`: The dot at the end specifies the build context. It tells Docker to use the current directory (where the Dockerfile is located) to build the image.
+
+-**docker images**:This command lists all Docker images currently available on the system. It shows details such as the repository name, tag, image ID, creation date, and size of the images.
+
+-**docker run -it -v cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js cypress-example-kitchensink**:
+• `docker run`: This command creates and starts a new container from a specified image.
+• `-it`: These flags are used together to run the container in interactive mode. This allows you to interact with the container through the terminal.
+• `-v \cypress-example-kitchensink\cypress\e2e\1-getting-started\todo.cy.js:/app/cypress/e2e/todo.cy.js`: The -v flag mounts a volume, which maps a file or directory from the host system to the container. In this case, it maps the todo.cy.js file from the specified location on the host machine to /app/cypress/e2e/todo.cy.js inside the container.
+
